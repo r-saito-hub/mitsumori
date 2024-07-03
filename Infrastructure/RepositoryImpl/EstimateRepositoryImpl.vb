@@ -1,5 +1,6 @@
 ﻿Option Strict On
 Option Infer On
+
 Imports System.Collections.Generic
 Imports System.Diagnostics
 Imports Domain
@@ -132,12 +133,20 @@ Public Class EstimateRepositoryImpl
                 .AppendLine("   print_date <= strftime(@print_date_end)")
 
                 '見積有効期限(区間開始)
-                .AppendLine("AND")
-                .AppendLine("   effective_date >= strftime(@effective_date_start)")
+                '.AppendLine("AND")
+                '.AppendLine("   effective_date >= strftime(@effective_date_start)")
 
                 '見積有効期限(区間終了)
-                .AppendLine("AND")
-                .AppendLine("   effective_date <= strftime(@effective_date_end)")
+                '.AppendLine("AND")
+                '.AppendLine("   effective_date <= strftime(@effective_date_end)")
+
+                '見積金額開始（未使用）
+                '.AppendLine("AND")
+                '.AppendLine("   EstimatePrice >= @PaymentStart")
+
+                '見積金額終了（未使用）
+                '.AppendLine("AND")
+                '.AppendLine("   EstimatePrice <= @PaymentEnd")
 
                 '営業担当
                 If c.PICEmployee IsNot Nothing Then
@@ -171,10 +180,10 @@ Public Class EstimateRepositoryImpl
                 .Add("@print_date_end", Helper.EndOfDate(c.IssueDateRangeEnd).ToString("yyyy-MM-dd HH:mm:ss"))
 
                 '見積有効期限(区間開始)
-                .Add("@effective_date_start", Helper.StartOfDate(c.EffectiveDateRangeStart).ToString("yyyy-MM-dd HH:mm:ss"))
+                '.Add("@effective_date_start", Helper.StartOfDate(c.EffectiveDateRangeStart).ToString("yyyy-MM-dd HH:mm:ss"))
 
                 '見積有効期限(区間終了)
-                .Add("@effective_date_end", Helper.EndOfDate(c.EffectiveDateRangeEnd).ToString("yyyy-MM-dd HH:mm:ss"))
+                '.Add("@effective_date_end", Helper.EndOfDate(c.EffectiveDateRangeEnd).ToString("yyyy-MM-dd HH:mm:ss"))
 
                 '営業担当
                 If c.PICEmployee IsNot Nothing Then
@@ -195,6 +204,7 @@ Public Class EstimateRepositoryImpl
             Dim taxRepo As New SalesTaxRepositoryImpl
 
             Dim dt = q.ExecQuery()
+
             If dt Is Nothing OrElse dt.Rows.Count = 0 Then
                 Return ret
             End If

@@ -12,7 +12,8 @@ Public Class InfrastructureSetting
     ''' <returns></returns>
     Public Function InitializeDB() As Boolean
 #If DEBUG Then
-        InitializeDebugDB()
+        '初期化しない
+        'InitializeDebugDB()
 #End If
         If IsExistDB() = False Then
             execDDL()

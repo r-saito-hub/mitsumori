@@ -108,7 +108,34 @@ Public Class CustomerEntry
         Address1TextBox.DataBindings.Add(NameOf(Address1TextBox.Text), BindingSource, NameOf(_Customer.Address1))
         '住所2
         Address2TextBox.DataBindings.Add(NameOf(Address2TextBox.Text), BindingSource, NameOf(_Customer.Address2))
-
+        '顧客TEL
+        KokyakuTelTextBox.DataBindings.Add(NameOf(KokyakuTelTextBox.Text), BindingSource, NameOf(_Customer.Kokyaku_tel))
+        '顧客FAX
+        KokyakuFaxTextBox.DataBindings.Add(NameOf(KokyakuFaxTextBox.Text), BindingSource, NameOf(_Customer.Kokyaku_fax))
+        '顧客担当者１名前
+        Tanto1NameTextBox.DataBindings.Add(NameOf(Tanto1NameTextBox.Text), BindingSource, NameOf(_Customer.Tanto1_name))
+        '顧客担当者１役職
+        Tanto1YakuTextBox.DataBindings.Add(NameOf(Tanto1YakuTextBox.Text), BindingSource, NameOf(_Customer.Tanto1_yaku))
+        '顧客担当者１部署
+        Tanto1BusyoTextBox.DataBindings.Add(NameOf(Tanto1BusyoTextBox.Text), BindingSource, NameOf(_Customer.Tanto1_busyo))
+        '顧客担当者１部署
+        Tanto1KeitaiTextBox.DataBindings.Add(NameOf(Tanto1KeitaiTextBox.Text), BindingSource, NameOf(_Customer.Tanto1_keitai))
+        '顧客担当者２名前
+        Tanto2NameTextBox.DataBindings.Add(NameOf(Tanto2NameTextBox.Text), BindingSource, NameOf(_Customer.Tanto2_name))
+        '顧客担当者２役職
+        Tanto2YakuTextBox.DataBindings.Add(NameOf(Tanto2YakuTextBox.Text), BindingSource, NameOf(_Customer.Tanto2_yaku))
+        '顧客担当者２部署
+        Tanto2BusyoTextBox.DataBindings.Add(NameOf(Tanto2BusyoTextBox.Text), BindingSource, NameOf(_Customer.Tanto2_busyo))
+        '顧客担当者２部署
+        Tanto2KeitaiTextBox.DataBindings.Add(NameOf(Tanto2KeitaiTextBox.Text), BindingSource, NameOf(_Customer.Tanto2_keitai))
+        '顧客担当者３名前
+        Tanto3NameTextBox.DataBindings.Add(NameOf(Tanto3NameTextBox.Text), BindingSource, NameOf(_Customer.Tanto3_name))
+        '顧客担当者３役職
+        Tanto3YakuTextBox.DataBindings.Add(NameOf(Tanto3YakuTextBox.Text), BindingSource, NameOf(_Customer.Tanto3_yaku))
+        '顧客担当者３部署
+        Tanto3BusyoTextBox.DataBindings.Add(NameOf(Tanto3BusyoTextBox.Text), BindingSource, NameOf(_Customer.Tanto3_busyo))
+        '顧客担当者３部署
+        Tanto3KeitaiTextBox.DataBindings.Add(NameOf(Tanto3KeitaiTextBox.Text), BindingSource, NameOf(_Customer.Tanto3_keitai))
         '=============================================================================
         'エラープロバイダのデータソースにフォームを紐づけたバインディングソースを割り当て
         '=============================================================================

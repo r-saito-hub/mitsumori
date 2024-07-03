@@ -52,6 +52,20 @@ Public Class CustomerRepositoryImpl
                 .AppendLine("   ,postal_code AS postal_code")
                 .AppendLine("   ,address1 AS address1")
                 .AppendLine("   ,address2 AS address2")
+                .AppendLine("   ,kokyaku_tel AS kokyaku_tel")
+                .AppendLine("   ,kokyaku_fax AS kokyaku_fax")
+                .AppendLine("   ,tanto1_name AS tanto1_name")
+                .AppendLine("   ,tanto1_yaku AS tanto1_yaku")
+                .AppendLine("   ,tanto1_busyo AS tanto1_busyo")
+                .AppendLine("   ,tanto1_keitai AS tanto1_keitai")
+                .AppendLine("   ,tanto2_name AS tanto2_name")
+                .AppendLine("   ,tanto2_yaku AS tanto2_yaku")
+                .AppendLine("   ,tanto2_busyo AS tanto2_busyo")
+                .AppendLine("   ,tanto2_keitai AS tanto2_keitai")
+                .AppendLine("   ,tanto3_name AS tanto3_name")
+                .AppendLine("   ,tanto3_yaku AS tanto3_yaku")
+                .AppendLine("   ,tanto3_busyo AS tanto3_busyo")
+                .AppendLine("   ,tanto3_keitai AS tanto3_keitai")
                 .AppendLine("FROM")
                 .AppendLine("   customers")
                 .AppendLine("WHERE")
@@ -95,6 +109,20 @@ Public Class CustomerRepositoryImpl
             c.PostalCode = dt.Rows(0)("postal_code").ToString
             c.Address1 = dt.Rows(0)("address1").ToString
             c.Address2 = dt.Rows(0)("address2").ToString
+            c.Kokyaku_tel = dt.Rows(0)("kokyaku_tel").ToString
+            c.Kokyaku_fax = dt.Rows(0)("kokyaku_fax").ToString
+            c.Tanto1_name = dt.Rows(0)("tanto1_name").ToString
+            c.Tanto1_yaku = dt.Rows(0)("tanto1_yaku").ToString
+            c.Tanto1_busyo = dt.Rows(0)("tanto1_busyo").ToString
+            c.Tanto1_keitai = dt.Rows(0)("tanto1_keitai").ToString
+            c.Tanto2_name = dt.Rows(0)("tanto2_name").ToString
+            c.Tanto2_yaku = dt.Rows(0)("tanto2_yaku").ToString
+            c.Tanto2_busyo = dt.Rows(0)("tanto2_busyo").ToString
+            c.Tanto2_keitai = dt.Rows(0)("tanto2_keitai").ToString
+            c.Tanto3_name = dt.Rows(0)("tanto3_name").ToString
+            c.Tanto3_yaku = dt.Rows(0)("tanto3_yaku").ToString
+            c.Tanto3_busyo = dt.Rows(0)("tanto3_busyo").ToString
+            c.Tanto3_keitai = dt.Rows(0)("tanto3_keitai").ToString
 
             Return c
         End Using
@@ -126,6 +154,20 @@ Public Class CustomerRepositoryImpl
                 .AppendLine("   ,postal_code AS postal_code")
                 .AppendLine("   ,address1 AS address1")
                 .AppendLine("   ,address2 AS address2")
+                .AppendLine("   ,kokyaku_tel AS kokyaku_tel")
+                .AppendLine("   ,kokyaku_fax AS kokyaku_fax")
+                .AppendLine("   ,tanto1_name AS tanto1_name")
+                .AppendLine("   ,tanto1_yaku AS tanto1_yaku")
+                .AppendLine("   ,tanto1_busyo AS tanto1_busyo")
+                .AppendLine("   ,tanto1_keitai AS tanto1_keitai")
+                .AppendLine("   ,tanto2_name AS tanto2_name")
+                .AppendLine("   ,tanto2_yaku AS tanto2_yaku")
+                .AppendLine("   ,tanto2_busyo AS tanto2_busyo")
+                .AppendLine("   ,tanto2_keitai AS tanto2_keitai")
+                .AppendLine("   ,tanto3_name AS tanto3_name")
+                .AppendLine("   ,tanto3_yaku AS tanto3_yaku")
+                .AppendLine("   ,tanto3_busyo AS tanto3_busyo")
+                .AppendLine("   ,tanto3_keitai AS tanto3_keitai")
                 .AppendLine("FROM")
                 .AppendLine("   customers")
                 .AppendLine("WHERE")
@@ -160,6 +202,20 @@ Public Class CustomerRepositoryImpl
             c.PostalCode = r("postal_code").ToString
             c.Address1 = r("address1").ToString
             c.Address2 = r("address2").ToString
+            c.Kokyaku_tel = r("kokyaku_tel").ToString
+            c.Kokyaku_fax = r("kokyaku_fax").ToString
+            c.Tanto1_name = r("tanto1_name").ToString
+            c.Tanto1_yaku = r("tanto1_yaku").ToString
+            c.Tanto1_busyo = r("tanto1_busyo").ToString
+            c.Tanto1_keitai = r("tanto1_keitai").ToString
+            c.Tanto2_name = r("tanto2_name").ToString
+            c.Tanto2_yaku = r("tanto2_yaku").ToString
+            c.Tanto2_busyo = r("tanto2_busyo").ToString
+            c.Tanto2_keitai = r("tanto2_keitai").ToString
+            c.Tanto3_name = r("tanto3_name").ToString
+            c.Tanto3_yaku = r("tanto3_yaku").ToString
+            c.Tanto3_busyo = r("tanto3_busyo").ToString
+            c.Tanto3_keitai = r("tanto3_keitai").ToString
 
             Return c
         End Using
@@ -186,6 +242,20 @@ Public Class CustomerRepositoryImpl
                 .AppendLine("   ,postal_code AS postal_code")
                 .AppendLine("   ,address1 AS address1")
                 .AppendLine("   ,address2 AS address2")
+                .AppendLine("   ,kokyaku_tel AS kokyaku_tel")
+                .AppendLine("   ,kokyaku_fax AS kokyaku_fax")
+                .AppendLine("   ,tanto1_name AS tanto1_name")
+                .AppendLine("   ,tanto1_yaku AS tanto1_yaku")
+                .AppendLine("   ,tanto1_busyo AS tanto1_busyo")
+                .AppendLine("   ,tanto1_keitai AS tanto1_keitai")
+                .AppendLine("   ,tanto2_name AS tanto2_name")
+                .AppendLine("   ,tanto2_yaku AS tanto2_yaku")
+                .AppendLine("   ,tanto2_busyo AS tanto2_busyo")
+                .AppendLine("   ,tanto2_keitai AS tanto2_keitai")
+                .AppendLine("   ,tanto3_name AS tanto3_name")
+                .AppendLine("   ,tanto3_yaku AS tanto3_yaku")
+                .AppendLine("   ,tanto3_busyo AS tanto3_busyo")
+                .AppendLine("   ,tanto3_keitai AS tanto3_keitai")
                 .AppendLine("FROM")
                 .AppendLine("   customers")
                 .AppendLine("WHERE")
@@ -199,7 +269,7 @@ Public Class CustomerRepositoryImpl
                 'かな名(前方一致)
                 If cond.KanaNameForwardMatch <> String.Empty Then
                     .AppendLine("AND")
-                    .AppendLine("   name LIKE @kana_name")
+                    .AppendLine("   kana_name LIKE @kana_name")
                 End If
                 '営業担当者
                 If cond.PIC IsNot Nothing Then
@@ -259,6 +329,20 @@ Public Class CustomerRepositoryImpl
                 c.PostalCode = r("postal_code").ToString
                 c.Address1 = r("address1").ToString
                 c.Address2 = r("address2").ToString
+                c.Kokyaku_tel = r("kokyaku_tel").ToString
+                c.Kokyaku_fax = r("kokyaku_fax").ToString
+                c.Tanto1_name = r("tanto1_name").ToString
+                c.Tanto1_yaku = r("tanto1_yaku").ToString
+                c.Tanto1_busyo = r("tanto1_busyo").ToString
+                c.Tanto1_keitai = r("tanto1_keitai").ToString
+                c.Tanto2_name = r("tanto2_name").ToString
+                c.Tanto2_yaku = r("tanto2_yaku").ToString
+                c.Tanto2_busyo = r("tanto2_busyo").ToString
+                c.Tanto2_keitai = r("tanto2_keitai").ToString
+                c.Tanto3_name = r("tanto3_name").ToString
+                c.Tanto3_yaku = r("tanto3_yaku").ToString
+                c.Tanto3_busyo = r("tanto3_busyo").ToString
+                c.Tanto3_keitai = r("tanto3_keitai").ToString
 
                 ret.Add(c)
             Next
@@ -322,6 +406,20 @@ Public Class CustomerRepositoryImpl
                 .AppendLine(",postal_code")
                 .AppendLine(",address1")
                 .AppendLine(",address2")
+                .AppendLine(",kokyaku_tel")
+                .AppendLine(",kokyaku_fax")
+                .AppendLine(",tanto1_name")
+                .AppendLine(",tanto1_yaku")
+                .AppendLine(",tanto1_busyo")
+                .AppendLine(",tanto1_keitai")
+                .AppendLine(",tanto2_name")
+                .AppendLine(",tanto2_yaku")
+                .AppendLine(",tanto2_busyo")
+                .AppendLine(",tanto2_keitai")
+                .AppendLine(",tanto3_name")
+                .AppendLine(",tanto3_yaku")
+                .AppendLine(",tanto3_busyo")
+                .AppendLine(",tanto3_keitai")
                 .AppendLine(",created_at")
                 .AppendLine(")")
                 .AppendLine("VALUES(")
@@ -332,6 +430,20 @@ Public Class CustomerRepositoryImpl
                 .AppendLine(",@postal_code")
                 .AppendLine(",@address1")
                 .AppendLine(",@address2")
+                .AppendLine(",@kokyaku_tel")
+                .AppendLine(",@kokyaku_fax")
+                .AppendLine(",@tanto1_name")
+                .AppendLine(",@tanto1_yaku")
+                .AppendLine(",@tanto1_busyo")
+                .AppendLine(",@tanto1_keitai")
+                .AppendLine(",@tanto2_name")
+                .AppendLine(",@tanto2_yaku")
+                .AppendLine(",@tanto2_busyo")
+                .AppendLine(",@tanto2_keitai")
+                .AppendLine(",@tanto3_name")
+                .AppendLine(",@tanto3_yaku")
+                .AppendLine(",@tanto3_busyo")
+                .AppendLine(",@tanto3_keitai")
                 .AppendLine(",@created_at")
                 .AppendLine(")")
             End With
@@ -344,6 +456,20 @@ Public Class CustomerRepositoryImpl
                 .Add("@postal_code", c.PostalCode)
                 .Add("@address1", c.Address1)
                 .Add("@address2", c.Address2)
+                .Add("@kokyaku_tel", c.Kokyaku_tel)
+                .Add("@kokyaku_fax", c.Kokyaku_fax)
+                .Add("@tanto1_name", c.Tanto1_name)
+                .Add("@tanto1_yaku", c.Tanto1_yaku)
+                .Add("@tanto1_busyo", c.Tanto1_busyo)
+                .Add("@tanto1_keitai", c.Tanto1_keitai)
+                .Add("@tanto2_name", c.Tanto2_name)
+                .Add("@tanto2_yaku", c.Tanto2_yaku)
+                .Add("@tanto2_busyo", c.Tanto2_busyo)
+                .Add("@tanto2_keitai", c.Tanto2_keitai)
+                .Add("@tanto3_name", c.Tanto3_name)
+                .Add("@tanto3_yaku", c.Tanto3_yaku)
+                .Add("@tanto3_busyo", c.Tanto3_busyo)
+                .Add("@tanto3_keitai", c.Tanto3_keitai)
                 .Add("@created_at", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"))
             End With
 
@@ -425,6 +551,20 @@ Public Class CustomerRepositoryImpl
                 .AppendLine("   ,postal_code = @postal_code")
                 .AppendLine("   ,address1 = @address1")
                 .AppendLine("   ,address2 = @address2")
+                .AppendLine("   ,kokyaku_tel = @kokyaku_tel")
+                .AppendLine("   ,kokyaku_fax = @kokyaku_fax")
+                .AppendLine("   ,tanto1_name = @tanto1_name")
+                .AppendLine("   ,tanto1_yaku = @tanto1_yaku")
+                .AppendLine("   ,tanto1_busyo = @tanto1_busyo")
+                .AppendLine("   ,tanto1_keitai = @tanto1_keitai")
+                .AppendLine("   ,tanto2_name = @tanto2_name")
+                .AppendLine("   ,tanto2_yaku = @tanto2_yaku")
+                .AppendLine("   ,tanto2_busyo = @tanto2_busyo")
+                .AppendLine("   ,tanto2_keitai = @tanto2_keitai")
+                .AppendLine("   ,tanto3_name = @tanto3_name")
+                .AppendLine("   ,tanto3_yaku = @tanto3_yaku")
+                .AppendLine("   ,tanto3_busyo = @tanto3_busyo")
+                .AppendLine("   ,tanto3_keitai = @tanto3_keitai")
                 .AppendLine("   ,updated_at = @updated_at")
                 .AppendLine("WHERE")
                 .AppendLine("   id = @id")
@@ -438,6 +578,20 @@ Public Class CustomerRepositoryImpl
                 .Add("@postal_code", c.PostalCode)
                 .Add("@address1", c.Address1)
                 .Add("@address2", c.Address2)
+                .Add("@kokyaku_tel", c.Kokyaku_tel)
+                .Add("@kokyaku_fax", c.Kokyaku_fax)
+                .Add("@tanto1_name", c.Tanto1_name)
+                .Add("@tanto1_yaku", c.Tanto1_yaku)
+                .Add("@tanto1_busyo", c.Tanto1_busyo)
+                .Add("@tanto1_keitai", c.Tanto1_keitai)
+                .Add("@tanto2_name", c.Tanto2_name)
+                .Add("@tanto2_yaku", c.Tanto2_yaku)
+                .Add("@tanto2_busyo", c.Tanto2_busyo)
+                .Add("@tanto2_keitai", c.Tanto2_keitai)
+                .Add("@tanto3_name", c.Tanto3_name)
+                .Add("@tanto3_yaku", c.Tanto3_yaku)
+                .Add("@tanto3_busyo", c.Tanto3_busyo)
+                .Add("@tanto3_keitai", c.Tanto3_keitai)
                 .Add("@updated_at", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"))
                 .Add("@id", c.ID)
             End With

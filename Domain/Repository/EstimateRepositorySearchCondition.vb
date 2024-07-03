@@ -53,5 +53,15 @@ Public Class EstimateRepositorySearchCondition
     ''' </summary>
     ''' <returns></returns>
     Public Property Customer As Customer
+    ''' <summary>
+    ''' 支払金額開始
+    ''' </summary>
+    ''' <returns></returns>
+    Public Property PaymentStart As Long
+    ''' <summary>
+    ''' 支払金額終了
+    ''' </summary>
+    ''' <returns></returns>
+    Public Property PaymentEnd As Long
 
 End Class

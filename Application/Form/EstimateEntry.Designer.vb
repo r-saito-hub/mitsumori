@@ -31,6 +31,7 @@ Partial Class EstimateEntry
         Me.EntryButton = New System.Windows.Forms.Button()
         Me.PrintPreviewButton = New System.Windows.Forms.Button()
         Me.DetailsDataGridView = New System.Windows.Forms.DataGridView()
+        Me.BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DueDateDateTimePicker = New System.Windows.Forms.DateTimePicker()
         Me.DueDateLabel = New System.Windows.Forms.Label()
         Me.PaymentConditionLabel = New System.Windows.Forms.Label()
@@ -51,66 +52,71 @@ Partial Class EstimateEntry
         Me.EstimatePriceIncludeTaxLabel = New System.Windows.Forms.Label()
         Me.EstimatePriceIncludeTaxTextBox = New System.Windows.Forms.TextBox()
         Me.ErrorProvider = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.FocusEmphasizeProvider = New Application.FocusEmphasizeProvider()
         Me.RowDownButton = New System.Windows.Forms.Button()
         Me.RowUpButton = New System.Windows.Forms.Button()
         Me.RowRemoveButton = New System.Windows.Forms.Button()
         Me.RowAddButton = New System.Windows.Forms.Button()
-        Me.BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.FocusEmphasizeProvider = New Application.FocusEmphasizeProvider()
         CType(Me.DetailsDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ErrorProvider, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ErrorProvider, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TitleLabel
         '
         Me.TitleLabel.AutoSize = True
-        Me.TitleLabel.Location = New System.Drawing.Point(14, 39)
+        Me.TitleLabel.Location = New System.Drawing.Point(23, 58)
+        Me.TitleLabel.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.TitleLabel.Name = "TitleLabel"
-        Me.TitleLabel.Size = New System.Drawing.Size(29, 12)
+        Me.TitleLabel.Size = New System.Drawing.Size(44, 18)
         Me.TitleLabel.TabIndex = 0
         Me.TitleLabel.Text = "件名"
         '
         'TitleTextBox
         '
-        Me.TitleTextBox.Location = New System.Drawing.Point(71, 35)
+        Me.TitleTextBox.Location = New System.Drawing.Point(118, 52)
+        Me.TitleTextBox.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.TitleTextBox.Name = "TitleTextBox"
-        Me.TitleTextBox.Size = New System.Drawing.Size(311, 19)
+        Me.TitleTextBox.Size = New System.Drawing.Size(516, 25)
         Me.TitleTextBox.TabIndex = 1
         '
         'EstimateNoLabel
         '
         Me.EstimateNoLabel.AutoSize = True
-        Me.EstimateNoLabel.Location = New System.Drawing.Point(14, 16)
+        Me.EstimateNoLabel.Location = New System.Drawing.Point(23, 24)
+        Me.EstimateNoLabel.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.EstimateNoLabel.Name = "EstimateNoLabel"
-        Me.EstimateNoLabel.Size = New System.Drawing.Size(53, 12)
+        Me.EstimateNoLabel.Size = New System.Drawing.Size(80, 18)
         Me.EstimateNoLabel.TabIndex = 0
         Me.EstimateNoLabel.Text = "見積番号"
         '
         'IssueDateLabel
         '
         Me.IssueDateLabel.AutoSize = True
-        Me.IssueDateLabel.Location = New System.Drawing.Point(446, 16)
+        Me.IssueDateLabel.Location = New System.Drawing.Point(743, 24)
+        Me.IssueDateLabel.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.IssueDateLabel.Name = "IssueDateLabel"
-        Me.IssueDateLabel.Size = New System.Drawing.Size(41, 12)
+        Me.IssueDateLabel.Size = New System.Drawing.Size(62, 18)
         Me.IssueDateLabel.TabIndex = 0
         Me.IssueDateLabel.Text = "発行日"
         '
         'CustomerLabel
         '
         Me.CustomerLabel.AutoSize = True
-        Me.CustomerLabel.Location = New System.Drawing.Point(12, 62)
+        Me.CustomerLabel.Location = New System.Drawing.Point(20, 93)
+        Me.CustomerLabel.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.CustomerLabel.Name = "CustomerLabel"
-        Me.CustomerLabel.Size = New System.Drawing.Size(41, 12)
+        Me.CustomerLabel.Size = New System.Drawing.Size(62, 18)
         Me.CustomerLabel.TabIndex = 0
         Me.CustomerLabel.Text = "顧客名"
         '
         'EntryButton
         '
         Me.EntryButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.EntryButton.Location = New System.Drawing.Point(674, 434)
+        Me.EntryButton.Location = New System.Drawing.Point(1123, 651)
+        Me.EntryButton.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.EntryButton.Name = "EntryButton"
-        Me.EntryButton.Size = New System.Drawing.Size(75, 23)
+        Me.EntryButton.Size = New System.Drawing.Size(125, 34)
         Me.EntryButton.TabIndex = 14
         Me.EntryButton.Text = "登録"
         Me.EntryButton.UseVisualStyleBackColor = True
@@ -118,9 +124,10 @@ Partial Class EstimateEntry
         'PrintPreviewButton
         '
         Me.PrintPreviewButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PrintPreviewButton.Location = New System.Drawing.Point(557, 434)
+        Me.PrintPreviewButton.Location = New System.Drawing.Point(928, 651)
+        Me.PrintPreviewButton.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.PrintPreviewButton.Name = "PrintPreviewButton"
-        Me.PrintPreviewButton.Size = New System.Drawing.Size(111, 23)
+        Me.PrintPreviewButton.Size = New System.Drawing.Size(185, 34)
         Me.PrintPreviewButton.TabIndex = 13
         Me.PrintPreviewButton.Text = "見積書プレビュー"
         Me.PrintPreviewButton.UseVisualStyleBackColor = True
@@ -130,87 +137,101 @@ Partial Class EstimateEntry
         Me.DetailsDataGridView.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DetailsDataGridView.AutoGenerateColumns = False
         Me.DetailsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DetailsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DetailsDataGridView.Location = New System.Drawing.Point(12, 125)
+        Me.DetailsDataGridView.DataSource = Me.BindingSource
+        Me.DetailsDataGridView.Location = New System.Drawing.Point(20, 188)
+        Me.DetailsDataGridView.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.DetailsDataGridView.Name = "DetailsDataGridView"
         Me.DetailsDataGridView.RowHeadersVisible = False
+        Me.DetailsDataGridView.RowHeadersWidth = 62
         Me.DetailsDataGridView.RowTemplate.Height = 21
-        Me.DetailsDataGridView.Size = New System.Drawing.Size(700, 187)
+        Me.DetailsDataGridView.Size = New System.Drawing.Size(1167, 280)
         Me.DetailsDataGridView.TabIndex = 8
         '
         'DueDateDateTimePicker
         '
-        Me.DueDateDateTimePicker.Location = New System.Drawing.Point(496, 35)
+        Me.DueDateDateTimePicker.Location = New System.Drawing.Point(827, 52)
+        Me.DueDateDateTimePicker.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.DueDateDateTimePicker.Name = "DueDateDateTimePicker"
-        Me.DueDateDateTimePicker.Size = New System.Drawing.Size(132, 19)
+        Me.DueDateDateTimePicker.Size = New System.Drawing.Size(217, 25)
         Me.DueDateDateTimePicker.TabIndex = 5
         '
         'DueDateLabel
         '
         Me.DueDateLabel.AutoSize = True
-        Me.DueDateLabel.Location = New System.Drawing.Point(458, 38)
+        Me.DueDateLabel.Location = New System.Drawing.Point(763, 57)
+        Me.DueDateLabel.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.DueDateLabel.Name = "DueDateLabel"
-        Me.DueDateLabel.Size = New System.Drawing.Size(29, 12)
+        Me.DueDateLabel.Size = New System.Drawing.Size(44, 18)
         Me.DueDateLabel.TabIndex = 0
         Me.DueDateLabel.Text = "納期"
         '
         'PaymentConditionLabel
         '
         Me.PaymentConditionLabel.AutoSize = True
-        Me.PaymentConditionLabel.Location = New System.Drawing.Point(12, 88)
+        Me.PaymentConditionLabel.Location = New System.Drawing.Point(20, 132)
+        Me.PaymentConditionLabel.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.PaymentConditionLabel.Name = "PaymentConditionLabel"
-        Me.PaymentConditionLabel.Size = New System.Drawing.Size(53, 12)
+        Me.PaymentConditionLabel.Size = New System.Drawing.Size(80, 18)
         Me.PaymentConditionLabel.TabIndex = 0
         Me.PaymentConditionLabel.Text = "支払条件"
         '
         'PaymentConditionComboBox
         '
         Me.PaymentConditionComboBox.FormattingEnabled = True
-        Me.PaymentConditionComboBox.Location = New System.Drawing.Point(71, 85)
+        Me.PaymentConditionComboBox.Location = New System.Drawing.Point(118, 128)
+        Me.PaymentConditionComboBox.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.PaymentConditionComboBox.Name = "PaymentConditionComboBox"
-        Me.PaymentConditionComboBox.Size = New System.Drawing.Size(206, 20)
+        Me.PaymentConditionComboBox.Size = New System.Drawing.Size(341, 26)
         Me.PaymentConditionComboBox.TabIndex = 3
         '
         'PICEmployeeLabel
         '
         Me.PICEmployeeLabel.AutoSize = True
-        Me.PICEmployeeLabel.Location = New System.Drawing.Point(434, 85)
+        Me.PICEmployeeLabel.Location = New System.Drawing.Point(723, 128)
+        Me.PICEmployeeLabel.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.PICEmployeeLabel.Name = "PICEmployeeLabel"
-        Me.PICEmployeeLabel.Size = New System.Drawing.Size(53, 12)
+        Me.PICEmployeeLabel.Size = New System.Drawing.Size(80, 18)
         Me.PICEmployeeLabel.TabIndex = 0
         Me.PICEmployeeLabel.Text = "担当営業"
         '
         'PICEmployeeComboBox
         '
         Me.PICEmployeeComboBox.FormattingEnabled = True
-        Me.PICEmployeeComboBox.Location = New System.Drawing.Point(496, 82)
+        Me.PICEmployeeComboBox.Location = New System.Drawing.Point(827, 123)
+        Me.PICEmployeeComboBox.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.PICEmployeeComboBox.Name = "PICEmployeeComboBox"
-        Me.PICEmployeeComboBox.Size = New System.Drawing.Size(132, 20)
+        Me.PICEmployeeComboBox.Size = New System.Drawing.Size(217, 26)
         Me.PICEmployeeComboBox.TabIndex = 7
         '
         'EffectiveDateLabel
         '
         Me.EffectiveDateLabel.AutoSize = True
-        Me.EffectiveDateLabel.Location = New System.Drawing.Point(410, 62)
+        Me.EffectiveDateLabel.Location = New System.Drawing.Point(683, 93)
+        Me.EffectiveDateLabel.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.EffectiveDateLabel.Name = "EffectiveDateLabel"
-        Me.EffectiveDateLabel.Size = New System.Drawing.Size(77, 12)
+        Me.EffectiveDateLabel.Size = New System.Drawing.Size(116, 18)
         Me.EffectiveDateLabel.TabIndex = 0
         Me.EffectiveDateLabel.Text = "見積有効期限"
         '
         'EffectiveDateDateTimePicker
         '
-        Me.EffectiveDateDateTimePicker.Location = New System.Drawing.Point(496, 59)
+        Me.EffectiveDateDateTimePicker.Location = New System.Drawing.Point(827, 88)
+        Me.EffectiveDateDateTimePicker.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.EffectiveDateDateTimePicker.Name = "EffectiveDateDateTimePicker"
-        Me.EffectiveDateDateTimePicker.Size = New System.Drawing.Size(132, 19)
+        Me.EffectiveDateDateTimePicker.Size = New System.Drawing.Size(217, 25)
         Me.EffectiveDateDateTimePicker.TabIndex = 6
+        Me.EffectiveDateDateTimePicker.Value = New Date(2024, 6, 28, 10, 2, 15, 0)
         '
         'RemarksLabel
         '
         Me.RemarksLabel.AutoSize = True
-        Me.RemarksLabel.Location = New System.Drawing.Point(14, 345)
+        Me.RemarksLabel.Location = New System.Drawing.Point(23, 518)
+        Me.RemarksLabel.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.RemarksLabel.Name = "RemarksLabel"
-        Me.RemarksLabel.Size = New System.Drawing.Size(29, 12)
+        Me.RemarksLabel.Size = New System.Drawing.Size(44, 18)
         Me.RemarksLabel.TabIndex = 7
         Me.RemarksLabel.Text = "備考"
         '
@@ -219,84 +240,94 @@ Partial Class EstimateEntry
         Me.RemarksTextBox.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.RemarksTextBox.Location = New System.Drawing.Point(14, 360)
+        Me.RemarksTextBox.Location = New System.Drawing.Point(23, 540)
+        Me.RemarksTextBox.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.RemarksTextBox.Multiline = True
         Me.RemarksTextBox.Name = "RemarksTextBox"
-        Me.RemarksTextBox.Size = New System.Drawing.Size(735, 68)
+        Me.RemarksTextBox.Size = New System.Drawing.Size(1222, 100)
         Me.RemarksTextBox.TabIndex = 12
         '
         'CustomerComboBox
         '
         Me.CustomerComboBox.FormattingEnabled = True
-        Me.CustomerComboBox.Location = New System.Drawing.Point(71, 59)
+        Me.CustomerComboBox.Location = New System.Drawing.Point(118, 88)
+        Me.CustomerComboBox.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.CustomerComboBox.Name = "CustomerComboBox"
-        Me.CustomerComboBox.Size = New System.Drawing.Size(206, 20)
+        Me.CustomerComboBox.Size = New System.Drawing.Size(341, 26)
         Me.CustomerComboBox.TabIndex = 2
         '
         'EstimateNoTextBox
         '
-        Me.EstimateNoTextBox.Location = New System.Drawing.Point(71, 13)
+        Me.EstimateNoTextBox.Location = New System.Drawing.Point(118, 20)
+        Me.EstimateNoTextBox.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.EstimateNoTextBox.Name = "EstimateNoTextBox"
         Me.EstimateNoTextBox.ReadOnly = True
-        Me.EstimateNoTextBox.Size = New System.Drawing.Size(206, 19)
+        Me.EstimateNoTextBox.Size = New System.Drawing.Size(341, 25)
         Me.EstimateNoTextBox.TabIndex = 0
         '
         'IssueDateDateTimePicker
         '
-        Me.IssueDateDateTimePicker.Location = New System.Drawing.Point(496, 13)
+        Me.IssueDateDateTimePicker.Location = New System.Drawing.Point(827, 20)
+        Me.IssueDateDateTimePicker.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.IssueDateDateTimePicker.Name = "IssueDateDateTimePicker"
-        Me.IssueDateDateTimePicker.Size = New System.Drawing.Size(132, 19)
+        Me.IssueDateDateTimePicker.Size = New System.Drawing.Size(217, 25)
         Me.IssueDateDateTimePicker.TabIndex = 4
         '
         'TaxRateLabel
         '
         Me.TaxRateLabel.AutoSize = True
-        Me.TaxRateLabel.Location = New System.Drawing.Point(426, 324)
+        Me.TaxRateLabel.Location = New System.Drawing.Point(710, 486)
+        Me.TaxRateLabel.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.TaxRateLabel.Name = "TaxRateLabel"
-        Me.TaxRateLabel.Size = New System.Drawing.Size(29, 12)
+        Me.TaxRateLabel.Size = New System.Drawing.Size(44, 18)
         Me.TaxRateLabel.TabIndex = 0
         Me.TaxRateLabel.Text = "税率"
         '
         'TaxRateTextBox
         '
-        Me.TaxRateTextBox.Location = New System.Drawing.Point(458, 321)
+        Me.TaxRateTextBox.Location = New System.Drawing.Point(763, 482)
+        Me.TaxRateTextBox.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.TaxRateTextBox.Name = "TaxRateTextBox"
         Me.TaxRateTextBox.ReadOnly = True
-        Me.TaxRateTextBox.Size = New System.Drawing.Size(46, 19)
+        Me.TaxRateTextBox.Size = New System.Drawing.Size(74, 25)
         Me.TaxRateTextBox.TabIndex = 10
         '
         'EstimatePriceLabel
         '
         Me.EstimatePriceLabel.AutoSize = True
-        Me.EstimatePriceLabel.Location = New System.Drawing.Point(205, 324)
+        Me.EstimatePriceLabel.Location = New System.Drawing.Point(342, 486)
+        Me.EstimatePriceLabel.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.EstimatePriceLabel.Name = "EstimatePriceLabel"
-        Me.EstimatePriceLabel.Size = New System.Drawing.Size(65, 12)
+        Me.EstimatePriceLabel.Size = New System.Drawing.Size(98, 18)
         Me.EstimatePriceLabel.TabIndex = 0
         Me.EstimatePriceLabel.Text = "御見積金額"
         '
         'EstimatePriceTextBox
         '
-        Me.EstimatePriceTextBox.Location = New System.Drawing.Point(276, 321)
+        Me.EstimatePriceTextBox.Location = New System.Drawing.Point(460, 482)
+        Me.EstimatePriceTextBox.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.EstimatePriceTextBox.Name = "EstimatePriceTextBox"
         Me.EstimatePriceTextBox.ReadOnly = True
-        Me.EstimatePriceTextBox.Size = New System.Drawing.Size(139, 19)
+        Me.EstimatePriceTextBox.Size = New System.Drawing.Size(229, 25)
         Me.EstimatePriceTextBox.TabIndex = 9
         '
         'EstimatePriceIncludeTaxLabel
         '
         Me.EstimatePriceIncludeTaxLabel.AutoSize = True
-        Me.EstimatePriceIncludeTaxLabel.Location = New System.Drawing.Point(510, 324)
+        Me.EstimatePriceIncludeTaxLabel.Location = New System.Drawing.Point(850, 486)
+        Me.EstimatePriceIncludeTaxLabel.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.EstimatePriceIncludeTaxLabel.Name = "EstimatePriceIncludeTaxLabel"
-        Me.EstimatePriceIncludeTaxLabel.Size = New System.Drawing.Size(97, 12)
+        Me.EstimatePriceIncludeTaxLabel.Size = New System.Drawing.Size(144, 18)
         Me.EstimatePriceIncludeTaxLabel.TabIndex = 0
         Me.EstimatePriceIncludeTaxLabel.Text = "御見積金額(税込)"
         '
         'EstimatePriceIncludeTaxTextBox
         '
-        Me.EstimatePriceIncludeTaxTextBox.Location = New System.Drawing.Point(612, 321)
+        Me.EstimatePriceIncludeTaxTextBox.Location = New System.Drawing.Point(1020, 482)
+        Me.EstimatePriceIncludeTaxTextBox.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.EstimatePriceIncludeTaxTextBox.Name = "EstimatePriceIncludeTaxTextBox"
         Me.EstimatePriceIncludeTaxTextBox.ReadOnly = True
-        Me.EstimatePriceIncludeTaxTextBox.Size = New System.Drawing.Size(139, 19)
+        Me.EstimatePriceIncludeTaxTextBox.Size = New System.Drawing.Size(229, 25)
         Me.EstimatePriceIncludeTaxTextBox.TabIndex = 11
         '
         'ErrorProvider
@@ -304,51 +335,55 @@ Partial Class EstimateEntry
         Me.ErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink
         Me.ErrorProvider.ContainerControl = Me
         '
-        'FocusEmphasizeProvider
-        '
-        Me.FocusEmphasizeProvider.Target = Me
-        '
         'RowDownButton
         '
         Me.RowDownButton.Image = Global.Application.My.Resources.Resources.Download_grey_16x
-        Me.RowDownButton.Location = New System.Drawing.Point(718, 181)
+        Me.RowDownButton.Location = New System.Drawing.Point(1197, 272)
+        Me.RowDownButton.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.RowDownButton.Name = "RowDownButton"
-        Me.RowDownButton.Size = New System.Drawing.Size(33, 23)
+        Me.RowDownButton.Size = New System.Drawing.Size(55, 34)
         Me.RowDownButton.TabIndex = 16
         Me.RowDownButton.UseVisualStyleBackColor = True
         '
         'RowUpButton
         '
         Me.RowUpButton.Image = Global.Application.My.Resources.Resources.Upload_gray_16x
-        Me.RowUpButton.Location = New System.Drawing.Point(718, 152)
+        Me.RowUpButton.Location = New System.Drawing.Point(1197, 228)
+        Me.RowUpButton.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.RowUpButton.Name = "RowUpButton"
-        Me.RowUpButton.Size = New System.Drawing.Size(33, 23)
+        Me.RowUpButton.Size = New System.Drawing.Size(55, 34)
         Me.RowUpButton.TabIndex = 16
         Me.RowUpButton.UseVisualStyleBackColor = True
         '
         'RowRemoveButton
         '
         Me.RowRemoveButton.Image = Global.Application.My.Resources.Resources.RemoveRow_16x
-        Me.RowRemoveButton.Location = New System.Drawing.Point(718, 265)
+        Me.RowRemoveButton.Location = New System.Drawing.Point(1197, 398)
+        Me.RowRemoveButton.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.RowRemoveButton.Name = "RowRemoveButton"
-        Me.RowRemoveButton.Size = New System.Drawing.Size(33, 23)
+        Me.RowRemoveButton.Size = New System.Drawing.Size(55, 34)
         Me.RowRemoveButton.TabIndex = 15
         Me.RowRemoveButton.UseVisualStyleBackColor = True
         '
         'RowAddButton
         '
         Me.RowAddButton.Image = Global.Application.My.Resources.Resources.AddRow_16x
-        Me.RowAddButton.Location = New System.Drawing.Point(718, 236)
+        Me.RowAddButton.Location = New System.Drawing.Point(1197, 354)
+        Me.RowAddButton.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.RowAddButton.Name = "RowAddButton"
-        Me.RowAddButton.Size = New System.Drawing.Size(33, 23)
+        Me.RowAddButton.Size = New System.Drawing.Size(55, 34)
         Me.RowAddButton.TabIndex = 15
         Me.RowAddButton.UseVisualStyleBackColor = True
         '
+        'FocusEmphasizeProvider
+        '
+        Me.FocusEmphasizeProvider.Target = Me
+        '
         'EstimateEntry
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(761, 461)
+        Me.ClientSize = New System.Drawing.Size(1268, 692)
         Me.Controls.Add(Me.RowDownButton)
         Me.Controls.Add(Me.RowUpButton)
         Me.Controls.Add(Me.RowRemoveButton)
@@ -380,11 +415,12 @@ Partial Class EstimateEntry
         Me.Controls.Add(Me.DueDateLabel)
         Me.Controls.Add(Me.CustomerLabel)
         Me.Controls.Add(Me.TitleLabel)
+        Me.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.Name = "EstimateEntry"
         Me.Text = "見積書の作成"
         CType(Me.DetailsDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ErrorProvider, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ErrorProvider, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

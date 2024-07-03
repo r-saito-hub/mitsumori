@@ -48,7 +48,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=Fields!IssueDate.Value</Value>
-                <Style />
+                <Style>
+                  <FontSize>9pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style>
@@ -81,6 +83,7 @@
                 <Value>=Fields!EstimateNo.Value</Value>
                 <Style>
                   <FontFamily>Meiryo UI</FontFamily>
+                  <FontSize>9pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -257,7 +260,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>3.7812cm</Top>
+        <Top>3.81592cm</Top>
         <Left>0.63182cm</Left>
         <Height>0.6cm</Height>
         <Width>3.82292cm</Width>
@@ -282,7 +285,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Fields!TotalPrice.Value</Value>
+                <Value>=Fields!TotalPrice.Value*1.1</Value>
                 <Style>
                   <FontFamily>Meiryo UI</FontFamily>
                   <Format>'¥'#,0;('¥'#,0)</Format>

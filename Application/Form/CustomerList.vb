@@ -254,6 +254,131 @@ Public Class CustomerList
         End With
         CustomerDataGridView.Columns.Add(custAddress2Col)
 
+        '顧客TEL列を作成
+        Dim custTelCol = New DataGridViewTextBoxColumn
+        With custTelCol
+            .Name = "CustomerTel"
+            .HeaderText = "顧客電話番号"
+            .DataPropertyName = "CustomerTel"
+        End With
+        CustomerDataGridView.Columns.Add(custTelCol)
+
+        '顧客FAX列を作成
+        Dim custFaxCol = New DataGridViewTextBoxColumn
+        With custFaxCol
+            .Name = "CustomerFax"
+            .HeaderText = "顧客FAX"
+            .DataPropertyName = "CustomerFax"
+        End With
+        CustomerDataGridView.Columns.Add(custFaxCol)
+
+        '担当１名前列を作成
+        Dim custTanto1NameCol = New DataGridViewTextBoxColumn
+        With custTanto1NameCol
+            .Name = "CustomerTanto1Name"
+            .HeaderText = "顧客担当者１名前"
+            .DataPropertyName = "CustomerTanto1Name"
+        End With
+        CustomerDataGridView.Columns.Add(custTanto1NameCol)
+
+        '担当１役職列を作成
+        Dim custTanto1YakuCol = New DataGridViewTextBoxColumn
+        With custTanto1YakuCol
+            .Name = "CustomerTanto1Yaku"
+            .HeaderText = "顧客担当者１役職"
+            .DataPropertyName = "CustomerTanto1Yaku"
+        End With
+        CustomerDataGridView.Columns.Add(custTanto1YakuCol)
+
+        '担当１部署列を作成
+        Dim custTanto1BusyoCol = New DataGridViewTextBoxColumn
+        With custTanto1BusyoCol
+            .Name = "CustomerTanto1Busyo"
+            .HeaderText = "顧客担当者１部署"
+            .DataPropertyName = "CustomerTanto1Busyo"
+        End With
+        CustomerDataGridView.Columns.Add(custTanto1BusyoCol)
+
+        '担当１携帯列を作成
+        Dim custTanto1KeitaiCol = New DataGridViewTextBoxColumn
+        With custTanto1KeitaiCol
+            .Name = "CustomerTanto1Keitai"
+            .HeaderText = "顧客担当者１携帯"
+            .DataPropertyName = "CustomerTanto1Keitai"
+        End With
+        CustomerDataGridView.Columns.Add(custTanto1KeitaiCol)
+        '担当２名前列を作成
+        Dim custTanto2NameCol = New DataGridViewTextBoxColumn
+        With custTanto2NameCol
+            .Name = "CustomerTanto2Name"
+            .HeaderText = "顧客担当者２名前"
+            .DataPropertyName = "CustomerTanto2Name"
+        End With
+        CustomerDataGridView.Columns.Add(custTanto2NameCol)
+
+        '担当２役職列を作成
+        Dim custTanto2YakuCol = New DataGridViewTextBoxColumn
+        With custTanto2YakuCol
+            .Name = "CustomerTanto2Yaku"
+            .HeaderText = "顧客担当者２役職"
+            .DataPropertyName = "CustomerTanto2Yaku"
+        End With
+        CustomerDataGridView.Columns.Add(custTanto2YakuCol)
+
+        '担当２部署列を作成
+        Dim custTanto2BusyoCol = New DataGridViewTextBoxColumn
+        With custTanto2BusyoCol
+            .Name = "CustomerTanto2Busyo"
+            .HeaderText = "顧客担当者２部署"
+            .DataPropertyName = "CustomerTanto2Busyo"
+        End With
+        CustomerDataGridView.Columns.Add(custTanto2BusyoCol)
+
+        '担当２携帯列を作成
+        Dim custTanto2KeitaiCol = New DataGridViewTextBoxColumn
+        With custTanto2KeitaiCol
+            .Name = "CustomerTanto2Keitai"
+            .HeaderText = "顧客担当者２携帯"
+            .DataPropertyName = "CustomerTanto2Keitai"
+        End With
+        CustomerDataGridView.Columns.Add(custTanto2KeitaiCol)
+
+        '担当３名前列を作成
+        Dim custTanto3NameCol = New DataGridViewTextBoxColumn
+        With custTanto3NameCol
+            .Name = "CustomerTanto3Name"
+            .HeaderText = "顧客担当者３名前"
+            .DataPropertyName = "CustomerTanto3Name"
+        End With
+        CustomerDataGridView.Columns.Add(custTanto3NameCol)
+
+        '担当３役職列を作成
+        Dim custTanto3YakuCol = New DataGridViewTextBoxColumn
+        With custTanto3YakuCol
+            .Name = "CustomerTanto3Yaku"
+            .HeaderText = "顧客担当者３役職"
+            .DataPropertyName = "CustomerTanto3Yaku"
+        End With
+        CustomerDataGridView.Columns.Add(custTanto3YakuCol)
+
+        '担当３部署列を作成
+        Dim custTanto3BusyoCol = New DataGridViewTextBoxColumn
+        With custTanto3BusyoCol
+            .Name = "CustomerTanto3Busyo"
+            .HeaderText = "顧客担当者３部署"
+            .DataPropertyName = "CustomerTanto3Busyo"
+        End With
+        CustomerDataGridView.Columns.Add(custTanto3BusyoCol)
+
+        '担当３携帯列を作成
+        Dim custTanto3KeitaiCol = New DataGridViewTextBoxColumn
+        With custTanto3KeitaiCol
+            .Name = "CustomerTanto3Keitai"
+            .HeaderText = "顧客担当者３携帯"
+            .DataPropertyName = "CustomerTanto3Keitai"
+        End With
+        CustomerDataGridView.Columns.Add(custTanto3KeitaiCol)
+
         '明細をクリア
         CustomerDataGridView.DataSource = Nothing
     End Sub
@@ -329,6 +454,93 @@ Public Class CustomerList
         Public ReadOnly Property CustomerAddress2 As String
             Get
                 Return _Customer.Address2
+            End Get
+        End Property
+
+        Public ReadOnly Property CustomerTel As String
+            Get
+                Return _Customer.Kokyaku_tel
+            End Get
+        End Property
+
+        Public ReadOnly Property CustomerFax As String
+            Get
+                Return _Customer.Kokyaku_fax
+            End Get
+        End Property
+
+        Public ReadOnly Property CustomerTanto1Name As String
+            Get
+                Return _Customer.Tanto1_name
+            End Get
+        End Property
+
+        Public ReadOnly Property CustomerTanto1Yaku As String
+            Get
+                Return _Customer.Tanto1_yaku
+            End Get
+        End Property
+
+        Public ReadOnly Property CustomerTanto1Busyo As String
+            Get
+                Return _Customer.Tanto1_busyo
+            End Get
+        End Property
+
+        Public ReadOnly Property CustomerTanto1Keitai As String
+            Get
+                Return _Customer.Tanto1_keitai
+            End Get
+        End Property
+
+
+        Public ReadOnly Property CustomerTanto2Name As String
+            Get
+                Return _Customer.Tanto2_name
+            End Get
+        End Property
+
+        Public ReadOnly Property CustomerTanto2Yaku As String
+            Get
+                Return _Customer.Tanto2_yaku
+            End Get
+        End Property
+
+        Public ReadOnly Property CustomerTanto2Busyo As String
+            Get
+                Return _Customer.Tanto2_busyo
+            End Get
+        End Property
+
+        Public ReadOnly Property CustomerTanto2Keitai As String
+            Get
+                Return _Customer.Tanto2_keitai
+            End Get
+        End Property
+
+
+
+        Public ReadOnly Property CustomerTanto3Name As String
+            Get
+                Return _Customer.Tanto3_name
+            End Get
+        End Property
+
+        Public ReadOnly Property CustomerTanto3Yaku As String
+            Get
+                Return _Customer.Tanto3_yaku
+            End Get
+        End Property
+
+        Public ReadOnly Property CustomerTanto3Busyo As String
+            Get
+                Return _Customer.Tanto3_busyo
+            End Get
+        End Property
+
+        Public ReadOnly Property CustomerTanto3Keitai As String
+            Get
+                Return _Customer.Tanto3_keitai
             End Get
         End Property
 

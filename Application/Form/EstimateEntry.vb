@@ -2,6 +2,7 @@
 Option Infer On
 
 Imports System.ComponentModel
+Imports Microsoft.Reporting.WinForms
 
 ''' <summary>
 ''' 見積作成
@@ -227,6 +228,8 @@ Public Class EstimateEntry
         IssueDateDateTimePicker.DataBindings.Add(NameOf(IssueDateDateTimePicker.Value), BindingSource, NameOf(_Estimate.IssueDate))
         '納期
         DueDateDateTimePicker.DataBindings.Add(NameOf(DueDateDateTimePicker.Value), BindingSource, NameOf(_Estimate.DueDate))
+        ' 初期値を設定(見積有効期限)
+        _Estimate.EffectiveDate = _Estimate.IssueDate.AddMonths(1)
         '見積有効期限
         EffectiveDateDateTimePicker.DataBindings.Add(NameOf(EffectiveDateDateTimePicker.Value), BindingSource, NameOf(_Estimate.EffectiveDate))
         '営業担当者

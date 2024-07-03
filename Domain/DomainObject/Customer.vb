@@ -3,6 +3,7 @@ Option Infer On
 
 Imports System.Collections.Generic
 Imports System.ComponentModel
+Imports System.Reflection.Emit
 
 ''' <summary>
 ''' 顧客1社を表現する
@@ -52,6 +53,21 @@ Public Class Customer
         _PostalCode = String.Empty
         _Address1 = String.Empty
         _Address2 = String.Empty
+        _Kokyaku_tel = String.Empty
+        _Kokyaku_fax = String.Empty
+        _Tanto1_name = String.Empty
+        _Tanto1_yaku = String.Empty
+        _Tanto1_busyo = String.Empty
+        _Tanto1_keitai = String.Empty
+        _Tanto2_name = String.Empty
+        _Tanto2_yaku = String.Empty
+        _Tanto2_busyo = String.Empty
+        _Tanto2_keitai = String.Empty
+        _Tanto3_name = String.Empty
+        _Tanto3_yaku = String.Empty
+        _Tanto3_busyo = String.Empty
+        _Tanto3_keitai = String.Empty
+
     End Sub
 
     Public Sub New(ByVal id As Integer, ByVal custRepo As ICustomerRepository, ByVal payRepo As IPaymentConditionRepository, ByVal empRepo As IEmployeeRepository)
@@ -66,6 +82,21 @@ Public Class Customer
         _PostalCode = String.Empty
         _Address1 = String.Empty
         _Address2 = String.Empty
+        _Kokyaku_tel = String.Empty
+        _Kokyaku_fax = String.Empty
+        _Tanto1_name = String.Empty
+        _Tanto1_yaku = String.Empty
+        _Tanto1_busyo = String.Empty
+        _Tanto1_keitai = String.Empty
+        _Tanto2_name = String.Empty
+        _Tanto2_yaku = String.Empty
+        _Tanto2_busyo = String.Empty
+        _Tanto2_keitai = String.Empty
+        _Tanto3_name = String.Empty
+        _Tanto3_yaku = String.Empty
+        _Tanto3_busyo = String.Empty
+        _Tanto3_keitai = String.Empty
+
     End Sub
 
 #End Region
@@ -182,7 +213,215 @@ Public Class Customer
         End Set
     End Property
 
+    Private _Kokyaku_tel As String
+    ''' <summary>
+    ''' 顧客電話番号
+    ''' </summary>
+    ''' <returns></returns>
+    Public Property Kokyaku_tel As String
+        Get
+            Return _Kokyaku_tel
+        End Get
+        Set(value As String)
+            _Kokyaku_tel = value
+            Validatekokyaku_tel()
+        End Set
+    End Property
 
+    Private _Kokyaku_fax As String
+    ''' <summary>
+    ''' 顧客FAX
+    ''' </summary>
+    ''' <returns></returns>
+    Public Property Kokyaku_fax As String
+        Get
+            Return _Kokyaku_fax
+        End Get
+        Set(value As String)
+            _Kokyaku_fax = value
+            Validatekokyaku_fax()
+        End Set
+    End Property
+
+    Private _Tanto1_name As String
+    ''' <summary>
+    ''' 顧客担当者１名前
+    ''' </summary>
+    ''' <returns></returns>
+    Public Property Tanto1_name As String
+        Get
+            Return _Tanto1_name
+        End Get
+        Set(value As String)
+            _Tanto1_name = value
+            Validatetanto1_name()
+        End Set
+    End Property
+
+    Private _Tanto1_yaku As String
+    ''' <summary>
+    ''' 顧客担当者役職
+    ''' </summary>
+    ''' <returns></returns>
+    Public Property Tanto1_yaku As String
+        Get
+            Return _Tanto1_yaku
+        End Get
+        Set(value As String)
+            _Tanto1_yaku = value
+            Validatetanto1_yaku()
+        End Set
+    End Property
+
+    Private _Tanto1_busyo As String
+    ''' <summary>
+    ''' 顧客担当者部署
+    ''' </summary>
+    ''' <returns></returns>
+    Public Property Tanto1_busyo As String
+        Get
+            Return _Tanto1_busyo
+        End Get
+        Set(value As String)
+            _Tanto1_busyo = value
+            Validatetanto1_busyo()
+        End Set
+    End Property
+
+    Private _Tanto1_keitai As String
+    ''' <summary>
+    ''' 顧客担当者部署
+    ''' </summary>
+    ''' <returns></returns>
+    Public Property Tanto1_keitai As String
+        Get
+            Return _Tanto1_keitai
+        End Get
+        Set(value As String)
+            _Tanto1_keitai = value
+            Validatetanto1_keitai()
+        End Set
+    End Property
+
+    Private _Tanto2_name As String
+    ''' <summary>
+    ''' 顧客担当者１名前
+    ''' </summary>
+    ''' <returns></returns>
+    Public Property Tanto2_name As String
+        Get
+            Return _Tanto2_name
+        End Get
+        Set(value As String)
+            _Tanto2_name = value
+            Validatetanto2_name()
+        End Set
+    End Property
+
+    Private _Tanto2_yaku As String
+    ''' <summary>
+    ''' 顧客担当者役職
+    ''' </summary>
+    ''' <returns></returns>
+    Public Property Tanto2_yaku As String
+        Get
+            Return _Tanto2_yaku
+        End Get
+        Set(value As String)
+            _Tanto2_yaku = value
+            Validatetanto2_yaku()
+        End Set
+    End Property
+
+    Private _Tanto2_busyo As String
+    ''' <summary>
+    ''' 顧客担当者部署
+    ''' </summary>
+    ''' <returns></returns>
+    Public Property Tanto2_busyo As String
+        Get
+            Return _Tanto2_busyo
+        End Get
+        Set(value As String)
+            _Tanto2_busyo = value
+            Validatetanto2_busyo()
+        End Set
+    End Property
+
+    Private _Tanto2_keitai As String
+    ''' <summary>
+    ''' 顧客担当者部署
+    ''' </summary>
+    ''' <returns></returns>
+    Public Property Tanto2_keitai As String
+        Get
+            Return _Tanto2_keitai
+        End Get
+        Set(value As String)
+            _Tanto2_keitai = value
+            Validatetanto2_keitai()
+        End Set
+    End Property
+
+    Private _Tanto3_name As String
+    ''' <summary>
+    ''' 顧客担当者１名前
+    ''' </summary>
+    ''' <returns></returns>
+    Public Property Tanto3_name As String
+        Get
+            Return _Tanto3_name
+        End Get
+        Set(value As String)
+            _Tanto3_name = value
+            Validatetanto3_name()
+        End Set
+    End Property
+
+    Private _Tanto3_yaku As String
+    ''' <summary>
+    ''' 顧客担当者役職
+    ''' </summary>
+    ''' <returns></returns>
+    Public Property Tanto3_yaku As String
+        Get
+            Return _Tanto3_yaku
+        End Get
+        Set(value As String)
+            _Tanto3_yaku = value
+            Validatetanto3_yaku()
+        End Set
+    End Property
+
+    Private _Tanto3_busyo As String
+    ''' <summary>
+    ''' 顧客担当者部署
+    ''' </summary>
+    ''' <returns></returns>
+    Public Property Tanto3_busyo As String
+        Get
+            Return _Tanto3_busyo
+        End Get
+        Set(value As String)
+            _Tanto3_busyo = value
+            Validatetanto3_busyo()
+        End Set
+    End Property
+
+    Private _Tanto3_keitai As String
+    ''' <summary>
+    ''' 顧客担当者部署
+    ''' </summary>
+    ''' <returns></returns>
+    Public Property Tanto3_keitai As String
+        Get
+            Return _Tanto3_keitai
+        End Get
+        Set(value As String)
+            _Tanto3_keitai = value
+            Validatetanto3_keitai()
+        End Set
+    End Property
 #End Region
 
 #Region "エラープロパティ"
@@ -412,6 +651,100 @@ Public Class Customer
         If _Address2.Length > 50 Then
             _errors(NameOf(_Address2)) = Address2IsTooLong
         End If
+    End Sub
+
+    ''' <summary>
+    ''' 顧客電話番号を検証
+    ''' </summary>
+    Private Sub Validatekokyaku_tel()
+
+    End Sub
+
+    ''' <summary>
+    ''' 顧客FAX番号を検証
+    ''' </summary>
+    Private Sub Validatekokyaku_fax()
+    End Sub
+
+    ''' <summary>
+    ''' 顧客担当者１名前を検証
+    ''' </summary>
+    Private Sub Validatetanto1_name()
+
+    End Sub
+    ''' <summary>
+    ''' 顧客担当者１役職を検証
+    ''' </summary>
+    Private Sub Validatetanto1_yaku()
+
+    End Sub
+
+    ''' <summary>
+    ''' 顧客担当者１部署検証
+    ''' </summary>
+    Private Sub Validatetanto1_busyo()
+
+    End Sub
+
+    ''' <summary>
+    ''' 顧客担当者１携帯を検証
+    ''' </summary>
+    Private Sub Validatetanto1_keitai()
+
+    End Sub
+
+    ''' <summary>
+    ''' 顧客担当者２名前を検証
+    ''' </summary>
+    Private Sub Validatetanto2_name()
+
+    End Sub
+    ''' <summary>
+    ''' 顧客担当者２役職を検証
+    ''' </summary>
+    Private Sub Validatetanto2_yaku()
+
+    End Sub
+
+    ''' <summary>
+    ''' 顧客担当者２部署検証
+    ''' </summary>
+    Private Sub Validatetanto2_busyo()
+
+    End Sub
+
+    ''' <summary>
+    ''' 顧客担当者２携帯を検証
+    ''' </summary>
+    Private Sub Validatetanto2_keitai()
+
+    End Sub
+
+    ''' <summary>
+    ''' 顧客担当者３名前を検証
+    ''' </summary>
+    Private Sub Validatetanto3_name()
+
+    End Sub
+    ''' <summary>
+    ''' 顧客担当者３役職を検証
+    ''' </summary>
+    Private Sub Validatetanto3_yaku()
+
+    End Sub
+
+    ''' <summary>
+    ''' 顧客担当者３部署検証
+    ''' </summary>
+    Private Sub Validatetanto3_busyo()
+
+    End Sub
+
+    ''' <summary>
+    ''' 顧客担当者３携帯を検証
+    ''' </summary>
+    Private Sub Validatetanto3_keitai()
+
     End Sub
 
 #End Region

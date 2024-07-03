@@ -129,8 +129,8 @@ Public Class EstimateList
         Me.SearchTitleTextBox.Clear()
         Me.SearchIssueDateStartDateTimePicker.Value = Date.Today
         Me.SearchIssueDateEndDateTimePicker.Value = Date.Today
-        Me.SearchEffectiveDateStartDateTimePicker.Value = Date.Today
-        Me.SearchEffectiveDateEndDateTimePicker.Value = Date.Today
+        'Me.MitsumoriStart.Text = ""
+        'Me.MitsumoriEnd.Text = ""
         Me.SearchPICEmployeeComboBox.SelectedIndex = 0
         Me.SearchCustomerComboBox.SelectedIndex = 0
     End Sub
@@ -312,8 +312,9 @@ Public Class EstimateList
             .TitleForwardMatch = Me.SearchTitleTextBox.Text
             .IssueDateRangeStart = Me.SearchIssueDateStartDateTimePicker.Value
             .IssueDateRangeEnd = Me.SearchIssueDateEndDateTimePicker.Value
-            .EffectiveDateRangeStart = Me.SearchEffectiveDateStartDateTimePicker.Value
-            .EffectiveDateRangeEnd = Me.SearchEffectiveDateEndDateTimePicker.Value
+            '未使用
+            '.PaymentStart = Long.Parse(Me.MitsumoriStart.Text)
+            '.PaymentEnd = Long.Parse(Me.MitsumoriEnd.Text)
             .PICEmployee = TryCast(Me.SearchPICEmployeeComboBox.SelectedValue, Domain.Employee)
             .Customer = TryCast(Me.SearchCustomerComboBox.SelectedValue, Domain.Customer)
         End With
